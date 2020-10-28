@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import View.EmployeeScreen;
+import View.employee.ViewEmployee;
 
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -88,14 +89,24 @@ public class AdminScreen extends JFrame {
 		btnNewButton_3.setBounds(125, 97, 158, 23);
 		contentPane.add(btnNewButton_3);
 		
-		JButton btnNewButton_4 = new JButton("Modo funcionario");
+		JButton btnNewButton_4 = new JButton("CRUD funcionário");
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				ViewEmployee.inicializaTela();
+				dispose();
+			}
+		});
+		btnNewButton_4.setBounds(125, 240, 158, 21);
+		contentPane.add(btnNewButton_4);
+		
+		JButton btnNewButton_4_1 = new JButton("Modo funcionario");
+		btnNewButton_4_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
 				EmployeeScreen.inicializaTela();
 				dispose();
 			}
 		});
-		btnNewButton_4.setBounds(125, 201, 158, 21);
-		contentPane.add(btnNewButton_4);
+		btnNewButton_4_1.setBounds(125, 193, 158, 21);
+		contentPane.add(btnNewButton_4_1);
 	}
 }
